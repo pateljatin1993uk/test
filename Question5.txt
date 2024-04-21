@@ -1,0 +1,21 @@
+Question 5 - Basic SQL
+
+$place = "Jimmy's Place";
+$sql = "INSERT INTO place(name) VALUES('{$place}')";
+$this->db->query($sql);
+
+
+Is this going to be valid, or will it produce an error? And if there is an error, what is it and how can it be fixed?
+
+1) Is this going to be valid, or will it produce an error?
+   
+   Ans:  Sql throw the error Incorrect syntax near 'Jimmy'.
+
+************************************************************************************************
+2) if there is an error, what is it and how can it be fixed?
+
+use \ (Escape) character to insert single quotes and double quotes.
+
+Solution : str_replace("'","\'","Jimmy\'s Place");
+
+Result : "Jimmy\'s Place" now it's workin.
